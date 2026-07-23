@@ -297,8 +297,8 @@ Knowledge base:
 ${KNOWLEDGE_BASE}`;
 
 const STARTER_PROMPTS = [
-  "Tell me about you!",
-  "Tell me about something you're proud of!",
+  "Tell me about yourself!",
+  "What's something you're proud of?",
   "What do people get wrong about you at first?",
   "What kind of role are you looking for?",
   "Would you rather fight 100 duck-sized horses, or 1 horse-sized duck?"
