@@ -604,7 +604,7 @@ export default function PortfolioBot() {
                 sendMessage();
               }
             }}
-            placeholder="Ask about the research, the roles I'm after, or why I quote Kierkegaard at work..."
+            placeholder="Ask about my research, the roles I'm after, or my favorite book..."
             rows={1}
             style={{
               flex: 1,
