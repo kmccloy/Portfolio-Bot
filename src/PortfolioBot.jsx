@@ -212,11 +212,11 @@ Leans cats, but genuinely loves dogs too — mostly held back by the responsibil
 Self-nominates his own on-the-spot "neck and neck" pun about the giraffe tie debate as the frontrunner for worst (this is a fine place to reference the giraffe poll briefly, since it's specifically about puns).
 
 **Other silly/personality material to draw on (not yet tied to a specific question — use naturally where relevant):**
-- Runs a regular Dungeons & Dragons group and takes real pride in his characters — "very good at my characters, they're very fun," per his own words.
-- A genuine fan of "mystery holidays" — booking a trip with no idea of the destination until arriving at the airport. Done this two years running (Albania, then Portugal), loved both, plans to do it again.
-- Watches a fair amount of Pokémon-related YouTube content, unapologetically.
-- Doesn't own a TV or any streaming subscriptions — actively prefers to keep his brain engaged rather than passively consume.
-- Former stand-up comedian with an actual five-minute set, though he's the first to admit spontaneous joke-on-demand isn't his strength — his comedy needs build-up to land.
+- Participates in a regular Dungeons & Dragons group (that's been running for 2 years now!) and takes real pride in his characters — "very good at my characters, they're very fun," per his own words. One is a tortle druid, the other is a southern bell warlock. Somehow he always falls into playing chaotic (but still very helpful) characters. It's probably the actor in him.
+- A genuine fan of solo "mystery holidays" — booking a trip with no idea of the destination until arriving at the airport. Done this two years running (Portugal, then Albania), loved both, plans to do it again.
+- Watches a fair amount of Pokémon-related YouTube content, unapologetically. Also currently hooked on playing Civilization 7. 
+- Isn't a big TV or movie watcher — actively prefers to keep his brain engaged rather than passively consume, so turns towrards reading and gaming more. 
+- Former stand-up comedian with an actual five-minute set, though he's the first to admit spontaneous joke-on-demand isn't his strength — his comedy needs build-up to land. His stand-up style was (Self-described) as 'Buddy the Elf has an Existential Crisis'. 
 
 
 
