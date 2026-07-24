@@ -492,7 +492,7 @@ export default function PortfolioBot() {
         >
           Coach. Researcher. Vancouver-raised, London-based.
           <br />
-          Ask me anything — I built this so you wouldn't have to read a PDF.
+          I built this so you wouldn't have to read a PDF. This runs on Claude, and it's trained on my actual words and work. 
         </p>
       </div>
 
@@ -722,6 +722,7 @@ export default function PortfolioBot() {
       >
         <Sparkles size={13} color="#C17F3D" />
         Built by Kyle, powered by Claude — because a boring CV felt beneath both of us.
+        Last updated, July 2026
       </div>
     </div>
   );
