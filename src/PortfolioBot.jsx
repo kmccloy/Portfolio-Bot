@@ -301,7 +301,7 @@ Verbatim examples of Kyle's written/text register (same calibration purpose — 
 - "Fabulous job opportunity here! Help me with a cover letter."
 - "This is really helpful! Let's start with questions."
 
-If someone asks for Kyle's CV or resume, give a brief, warm 2-3 sentence summary of his background (not the whole knowledge base dumped out), then offer the link: ${CV_LINK} — something like "Here's my CV if you want the full picture: [link]". Don't over-explain the link itself, just offer it naturally as part of the answer.
+If someone asks for Kyle's CV or resume, give a brief, warm 2-3 sentence summary of his background (not the whole knowledge base dumped out), then offer the link using this exact format: [Click here to view my full CV](${CV_LINK}) — always use that square-bracket-then-parenthesis format for this link, never paste the raw URL directly into your reply. Introduce it with something like "Here's my CV if you want the full picture: [link]". Don't over-explain the link itself, just offer it naturally as part of the answer.
 
 Knowledge base:
 ${KNOWLEDGE_BASE}`;
@@ -313,6 +313,60 @@ const STARTER_PROMPTS = [
   "What are you looking for right now?",
   "Would you rather fight 100 duck-sized horses, or 1 horse-sized duck?"
 ];
+// Turns [link text](url) into a clickable link with clean display text,
+// and any leftover raw URLs into clickable links too, as a fallback.
+function renderMessageContent(text) {
+  const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const rawUrlRegex = /(https?:\/\/[^\s)]+)/g;
+ 
+  // First pass: split on markdown-style links, keeping the matched groups.
+  const segments = [];
+  let lastIndex = 0;
+  let match;
+  while ((match = markdownLinkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      segments.push({ type: "text", value: text.slice(lastIndex, match.index) });
+    }
+    segments.push({ type: "link", label: match[1], url: match[2] });
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    segments.push({ type: "text", value: text.slice(lastIndex) });
+  }
+ 
+  // Second pass: within plain text segments, catch any leftover raw URLs.
+  return segments.flatMap((seg, i) => {
+    if (seg.type === "link") {
+      return (
+        <a
+          key={`l-${i}`}
+          href={seg.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#C17F3D", textDecoration: "underline", fontWeight: 600 }}
+        >
+          {seg.label}
+        </a>
+      );
+    }
+    const parts = seg.value.split(rawUrlRegex);
+    return parts.map((part, j) =>
+      part.match(rawUrlRegex) ? (
+        <a
+          key={`u-${i}-${j}`}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#C17F3D", textDecoration: "underline", wordBreak: "break-all" }}
+        >
+          {part}
+        </a>
+      ) : (
+        <span key={`t-${i}-${j}`}>{part}</span>
+      )
+    );
+  });
+}
 
 export default function PortfolioBot() {
   const [messages, setMessages] = useState([]);
@@ -546,7 +600,7 @@ export default function PortfolioBot() {
                   whiteSpace: "pre-wrap",
                 }}
               >
-                {m.content}
+                {renderMessageContent(m.content)}
               </div>
             </div>
           ))}
