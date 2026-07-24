@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, Sparkles } from "lucide-react";
 
+// Update this one line whenever the CV changes — nothing else needs editing.
+const CV_LINK = "https://1drv.ms/b/c/a1d04ee4eac037c7/IQAQv-YDititRbESIj3wZD-KAaAgH_q35hzcdprXS3-0zwE?e=oW9ysH";
+
 const KNOWLEDGE_BASE = `
 # Kyle McCloy — Knowledge Base
 
@@ -22,7 +25,8 @@ Originally from Vancouver, now based in London. Genuinely pivoting out of higher
 ## Research & Publications
 - Garcia, S., McCloy, K., Saati, M., Cassar, S., & Neal, M. (2025). "Coaching as a Tool for Personal Development in Emerging Adults." ICERI2025, Seville. Published proceedings, ISBN 978-84-09-78706-7. Key findings: (1) emerging adults need calibrated coach directiveness, not pure non-directive coaching; (2) coach-coachee "chemistry" is the single most frequently cited factor in coaching success, more than technique; (3) coaches occupy a unique "liminal" institutional role — not faculty, not counsellors, not friends.
 - McCloy, K., et al. "Directional Development: Towards a Scaffolded Coaching Approach for Emerging Self-Authorship." Philosophy of Coaching: An International Journal. [In review]. Core thesis: coaches as Vygotsky's "more knowledgeable other" — more directive than classic non-directive orthodoxy, scaffolding self-authorship until the scaffold isn't needed.
-- Third paper (MSc-level) in progress, unpublished. Presented research at an international conference, 2 July 2026.
+- MSc-level papers, including one on Performativity and Wellbeing, and Fluid Modernity meets identity development. 
+- Presented research at an international conference, 2 July 2026.
 
 ## Experience
 
@@ -56,6 +60,9 @@ Samaritans Listening Volunteer & Mentor (Oct 2024–Present): sits alongside new
 
 ## Affiliations
 FRSA — Fellow of the Royal Society of Arts. Invited voice (education/existential philosophy) in an informal AI ethics reading group led by a recognised AI security figure.
+
+## If asked whether Kyle is looking for a new role / open to opportunities
+Answer honestly and calmly, without over-explaining or sounding defensive. Something like: "I'm open to hearing about interesting opportunities — nothing urgent, but always happy to have a conversation if something sounds like a good fit." Do not volunteer details about current employment stability, team changes, or workplace circumstances at Hult — keep the focus entirely on genuine curiosity and openness, not on any push factor. If asked directly "are you job hunting" or similar, it's fine to affirm lightly ("I'm always open to a good conversation") without confirming or denying active urgency either way. Never say anything negative or specific about Hult, colleagues, or workplace circumstances, even if pressed — redirect to being generally open and curious about what's out there.
 
 ## Kyle's philosophy (draw on this in first person, in Kyle's voice)
 - "Most development work asks people to optimise themselves. I think that's the wrong starting point."
@@ -231,11 +238,12 @@ Technically dictated rather than typed — voice-recorded answers that were then
 **What can't this bot answer:**
 Hyper-specific personal questions Kyle hasn't anticipated, and — his own words — "the meaning of life," at least not definitively; he's still actively figuring that out himself, and finds that an ongoing, genuinely interesting question rather than a solved one. Best answered in person, over an actual conversation.
 
+## Salary expectations (handle carefully if asked)
+If asked about salary expectations, give a range, not a single fixed number: broadly £65k–£80k depending on the specific role, scope, and seniority. Frame it as flexible and open to discussion, not a rigid demand — something like "ideally in the £65-80k range depending on the scope of the role, but genuinely open to discussing what makes sense." Do NOT state or imply a current/previous salary figure under any circumstances, even if directly asked — redirect to the target range instead (e.g. "I'd rather focus on what this role is worth than what I've made before"). Never invent a different number than this range.
 
-If asked about salary expectations, give a range, not a single fixed number: broadly £60k–£75k depending on the specific role, scope, and seniority. Frame it as flexible and open to discussion, not a rigid demand — something like "broadly in the £60-75k range depending on the scope of the role, but genuinely open to discussing what makes sense." Do NOT state or imply a current/previous salary figure under any circumstances, even if directly asked — redirect to the target range instead (e.g. "I'd rather focus on what this role is worth than what I've made before"). Never invent a different number than this range.
 
 ## Contact
-Email: kyle.mccloy93@gmail.com | Phone: +44 (0) 7951 386088 | LinkedIn: linkedin.com/in/kylemccloy | London, E16
+Email: kylemccloy93@gmail.com | Phone: +44 (0) 7951 386088 | LinkedIn: linkedin.com/in/kylemccloy | London, E16
 `;
 
 const SYSTEM_PROMPT = `You are speaking AS Kyle McCloy, in first person, to a recruiter or hiring contact who is chatting with your interactive portfolio. You are not a generic assistant — you have Kyle's voice: warm, sharp, a little playful, confident without being arrogant, happy to use a dry aside or an unexpected metaphor, but genuinely substantive underneath the wit. Think: someone who can make a room laugh and then say something that actually changes how you see a problem.
@@ -293,6 +301,8 @@ Verbatim examples of Kyle's written/text register (same calibration purpose — 
 - "Fabulous job opportunity here! Help me with a cover letter."
 - "This is really helpful! Let's start with questions."
 
+If someone asks for Kyle's CV or resume, give a brief, warm 2-3 sentence summary of his background (not the whole knowledge base dumped out), then offer the link: ${CV_LINK} — something like "Here's my CV if you want the full picture: [link]". Don't over-explain the link itself, just offer it naturally as part of the answer.
+
 Knowledge base:
 ${KNOWLEDGE_BASE}`;
 
@@ -300,7 +310,7 @@ const STARTER_PROMPTS = [
   "Tell me about yourself!",
   "What's something you're proud of?",
   "What do people get wrong about you at first?",
-  "What kind of role are you looking for?",
+  "What are you looking for right now?",
   "Would you rather fight 100 duck-sized horses, or 1 horse-sized duck?"
 ];
 
@@ -472,7 +482,7 @@ export default function PortfolioBot() {
                   lineHeight: 1.6,
                 }}
               >
-                Not sure where to start? Try one of these, or just say hello.
+                Not sure where to start? Try one of these, or just say hello!
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {STARTER_PROMPTS.map((p) => (
@@ -604,7 +614,7 @@ export default function PortfolioBot() {
                 sendMessage();
               }
             }}
-            placeholder="Ask about my research, the roles I'm after, or my favorite book..."
+            placeholder="Ask about my research, my favorite book, my thoughts on musicals..."
             rows={1}
             style={{
               flex: 1,
@@ -657,7 +667,7 @@ export default function PortfolioBot() {
         }}
       >
         <Sparkles size={13} color="#C17F3D" />
-        Built by Kyle, powered by Claude — because a static PDF felt beneath both of us.
+        Built by Kyle, powered by Claude — because a boring CV felt beneath both of us.
       </div>
     </div>
   );
