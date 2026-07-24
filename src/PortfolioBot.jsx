@@ -313,7 +313,6 @@ const STARTER_PROMPTS = [
   "Tell me about yourself!",
   "What's something you're proud of?",
   "What do people get wrong about you at first?",
-  "What are you looking for right now?",
   "Would you rather fight 100 duck-sized horses, or 1 horse-sized duck?"
 ];
 // Turns [link text](url) into a clickable link with clean display text,
@@ -495,7 +494,7 @@ export default function PortfolioBot() {
         >
           Coach. Researcher. Vancouver-raised, London-based.
           <br />
-          I built this so you wouldn't have to read a PDF. This runs on Claude, and it's trained on my actual words and work. 
+          I built this so you wouldn't have to read a PDF — it runs on Claude, and it's trained on my actual words and work. 
         </p>
       </div>
 
