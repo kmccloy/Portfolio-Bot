@@ -60,6 +60,9 @@ You can probably see how this tangles together fast. Maybe avoidance is better a
 
 Yalom's advice here — echoed by Kierkegaard's idea of self-authorship, and by de Beauvoir's notion of continual self-becoming, with a dash of Camus' absurdity — isn't that there's a correct answer waiting to be found. It's that the work is choosing to actually face the given, rather than building a more sophisticated way to avoid it.
 
+![Manatee with a funny hat](/images/absurdity.png) 
+*Art by Billy Murphy — billymurphyart.com*
+
 I could become bitter (it's so tempting). I could ignore it all and just hope it all goes away (not my typical mode). Or I could just simply give up. But I spent a Sunday afternoon writing this tangent, so you know that's not happening (and again, mama didn't raise no quitter).
 
 Unfortunately, I don't have a tidy resolution to hand you, nor am I going to manufacture one just because an article needs a closing paragraph. Easy answers are just a way to add a new layer of avoidance. It's also getting hard to focus on account of the loud TikToks.
