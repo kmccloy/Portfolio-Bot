@@ -1,0 +1,64 @@
+---
+// src/layouts/BaseLayout.astro
+// Shared shell for every page on the site — carries the same palette,
+// type, and quiet texture as the chatbot homepage, so navigating between
+// pages never feels like leaving the site.
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Kyle McCloy — coach, researcher, builder." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title} — Kyle McCloy</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      :root {
+        --ink-green: #1c2b22;
+        --sage: #8fa593;
+        --cream: #f6f2e7;
+        --panel: #ede7d4;
+        --border: #d9cda8;
+        --border-soft: #cbbfa0;
+        --accent: #c17f3d;
+        --accent-hover: #d6934f;
+        --muted-green: #3e5240;
+        --text-dim: #5c6b57;
+        --footer-text: #4a5a47;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--ink-green);
+        color: var(--cream);
+        font-family: "Fraunces", Georgia, serif;
+      }
+      a {
+        color: inherit;
+      }
+      ::selection {
+        background: var(--accent);
+        color: var(--ink-green);
+      }
+    </style>
+  </body>
+</html>

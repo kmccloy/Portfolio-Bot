@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import LandingIntro from "../components/LandingIntro.astro";
+import PortfolioBot from "../components/PortfolioBot.jsx";
+---
+
+<BaseLayout title="Home" description="An interactive portfolio — ask Kyle anything.">
+  <SiteNav current="/" />
+  <LandingIntro />
+  <PortfolioBot client:load />
+</BaseLayout>

@@ -1,0 +1,111 @@
+---
+// src/pages/writing/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import { getCollection } from "astro:content";
+
+export const prerender = true;
+
+const allPosts = await getCollection("writing", ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatDate = (d: Date) =>
+  d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+---
+
+<BaseLayout title="Writing" description="Notes on coaching, AI, and building things from scratch.">
+  <SiteNav current="/writing" />
+
+  <main class="writing-index">
+    <p class="writing-index__eyebrow">Notes & Essays</p>
+    <h1 class="writing-index__heading">Writing</h1>
+
+    {
+      posts.length === 0 ? (
+        <p class="writing-index__empty">Nothing posted yet — check back soon.</p>
+      ) : (
+        <ul class="writing-index__list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/writing/${post.id}`} class="writing-index__item">
+                <span class="writing-index__item-date">{formatDate(post.data.date)}</span>
+                <span class="writing-index__item-title">{post.data.title}</span>
+                {post.data.excerpt && (
+                  <span class="writing-index__item-excerpt">{post.data.excerpt}</span>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </main>
+</BaseLayout>
+
+<style>
+  .writing-index {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  .writing-index__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  .writing-index__heading {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 44px);
+    color: var(--cream);
+    margin: 0 0 40px;
+    letter-spacing: -0.01em;
+  }
+  .writing-index__empty {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: var(--sage);
+  }
+  .writing-index__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .writing-index__list li + li {
+    border-top: 1px solid var(--muted-green);
+  }
+  .writing-index__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 22px 0;
+    text-decoration: none;
+  }
+  .writing-index__item-date {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--sage);
+  }
+  .writing-index__item-title {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: var(--cream);
+    transition: color 0.15s ease;
+  }
+  .writing-index__item:hover .writing-index__item-title {
+    color: var(--accent);
+  }
+  .writing-index__item-excerpt {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #b8c2b3;
+    line-height: 1.5;
+  }
+</style>
