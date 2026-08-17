@@ -36,6 +36,9 @@ Yalom's argument is that a huge amount of everyday anxiety is really just one of
 
 An "existential crisis," properly understood, isn't a breakdown, though it may feel like it. It's the moment one of these existential givens stops being theoretical and becomes impossible to avoid — usually triggered by some sort of disruptive event, be it personal (risk of redundancy), global (world conflict), or even just a bit superficial (TikTok watchers in a cafe). It's that disorienting wave of realising that your identity, your five-year plan, your micromanaging of staff, your carefully built sense of who you are, can't actually protect you from any of this. That's just it, man.
 
+![Bear yelling DESPAIRt](/images/Despair.png) 
+*Art by Billy Murphy — billymurphyart.com*
+
 But is it really a malfunction? Well, no. It's potentially one of the richest states to be in. It's the time where you step outside those layers of avoidance and you can take steps towards renegotiating your relationship with the big, spooky, existential given itself. Could you possibly become frenemies? Well, that's up to you.
 
 ## It's me, hi, I'm the problem, it's me
