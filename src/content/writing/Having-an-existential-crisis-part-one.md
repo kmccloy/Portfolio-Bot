@@ -36,7 +36,7 @@ Yalom's argument is that a huge amount of everyday anxiety is really just one of
 
 An "existential crisis," properly understood, isn't a breakdown, though it may feel like it. It's the moment one of these existential givens stops being theoretical and becomes impossible to avoid — usually triggered by some sort of disruptive event, be it personal (risk of redundancy), global (world conflict), or even just a bit superficial (TikTok watchers in a cafe). It's that disorienting wave of realising that your identity, your five-year plan, your micromanaging of staff, your carefully built sense of who you are, can't actually protect you from any of this. That's just it, man.
 
-![Bear yelling DESPAIRt](/images/Despair.png) 
+![Bear yelling DESPAIRt](/images/DESPAIR.png) 
 *Art by Billy Murphy — billymurphyart.com*
 
 But is it really a malfunction? Well, no. It's potentially one of the richest states to be in. It's the time where you step outside those layers of avoidance and you can take steps towards renegotiating your relationship with the big, spooky, existential given itself. Could you possibly become frenemies? Well, that's up to you.
@@ -63,7 +63,7 @@ You can probably see how this tangles together fast. Maybe avoidance is better a
 
 Yalom's advice here — echoed by Kierkegaard's idea of self-authorship, and by de Beauvoir's notion of continual self-becoming, with a dash of Camus' absurdity — isn't that there's a correct answer waiting to be found. It's that the work is choosing to actually face the given, rather than building a more sophisticated way to avoid it.
 
-![Manatee with a funny hat](/images/absurdity.png) 
+![Manatee with a funny hat](/images/Absurdity.png) 
 *Art by Billy Murphy — billymurphyart.com*
 
 I could become bitter (it's so tempting). I could ignore it all and just hope it all goes away (not my typical mode). Or I could just simply give up. But I spent a Sunday afternoon writing this tangent, so you know that's not happening (and again, mama didn't raise no quitter).
