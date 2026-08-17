@@ -1,5 +1,5 @@
 ---
-title: "Having an Existential Crisis? Good."
+title: "I'm Having An Existential Crisis. Please Send Help. (pt 1)"
 date: 2026-08-17
 excerpt: "Higher education is mid-redundancy, the drought's historic, and I'm rethinking my whole career — turns out that's not a malfunction, it's the point."
 ---
