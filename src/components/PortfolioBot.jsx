@@ -612,13 +612,12 @@ export default function PortfolioBot() {
         .kb-send-btn:hover:not(:disabled) { background: #D6934F !important; }
         textarea:focus, input:focus { outline: 2px solid #C17F3D; outline-offset: 2px; }
       `}</style>
-
-      {/* Header — programme note framing */}
+      {/* Small chat label — the landing intro above now carries the hero/intro role */}
       <div
         style={{
           width: "100%",
           maxWidth: 760,
-          padding: "8px 24px 28px",
+          padding: "4px 24px 20px",
           textAlign: "center",
         }}
       >
@@ -629,41 +628,12 @@ export default function PortfolioBot() {
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: "#C17F3D",
-            marginBottom: 14,
             fontWeight: 600,
           }}
         >
-          An Interactive Portfolio
+          Ask Me Anything
         </div>
-        <h1
-          style={{
-            fontFamily: "'Fraunces', serif",
-            fontWeight: 500,
-            fontSize: "clamp(32px, 6vw, 48px)",
-            color: "#F6F2E7",
-            margin: 0,
-            letterSpacing: "-0.01em",
-          }}
-        >
-          Kyle McCloy
-        </h1>
-        <p
-          style={{
-            fontFamily: "'Fraunces', serif",
-            fontStyle: "italic",
-            fontWeight: 400,
-            fontSize: 17,
-            color: "#8FA593",
-            marginTop: 10,
-            lineHeight: 1.5,
-          }}
-        >
-          Coach. Researcher. Vancouver-raised, London-based.
-          <br />
-          I built this so you wouldn't have to read a PDF — it runs on Claude, and it's trained on my actual words and work. 
-        </p>
       </div>
-
       {/* Stage — chat area */}
       <div
         className="kb-curtain"
